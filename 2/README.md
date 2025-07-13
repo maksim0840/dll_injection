@@ -90,12 +90,35 @@
    
   <img width="2557" height="1316" alt="Снимок экрана 2025-07-14 003208" src="https://github.com/user-attachments/assets/ebd6867b-4b7c-453f-a310-610c0207b156" />
 
-9) Переключаемся на вкладку Section Hdrs и запоминаем Virtual Addr нашей секции
+9) Переключаемся на вкладку Section Hdrs и запоминаем Raw Addr и Virtual Addr нашей секции .mycode
+  - Raw Addr: 0x16800
   - Virtual Addr: 0x1C000
     
   <img width="2556" height="1311" alt="Снимок экрана 2025-07-14 003801" src="https://github.com/user-attachments/assets/474b0d3b-41bb-479c-b49b-cf89f14c6071" />
 
-10) 
-  
+10) В этой же вкладке ищем секцию "НУЖНАЯ!!!!!!" .idata и запоминаем Raw Addr и Virtual Addr
+  - Raw Addr: 0xB200
+  - Virtual Addr: 0x11000
     
+  <img width="2557" height="1319" alt="Снимок экрана 2025-07-14 011817" src="https://github.com/user-attachments/assets/c239e664-00e4-4f15-a984-6abc58ffe0ef" />
+
+10) Переключаемся на вкладку Imports и ищем адресс Thunk для функции, которую хотим заменить (в данном случае - функция GetLocaltTime)
+    - Thunk: 0x11414
+
+  <img width="2556" height="1318" alt="Снимок экрана 2025-07-14 004639" src="https://github.com/user-attachments/assets/9f8ab34d-f25d-423b-91c7-cfa88c5e3d66" />
+  
+11) Найдём адресс указателя на функцию, которую хотим подменить по формуле (Raw_Offset = Thunk - [.idata]Virtual_Addr + [.idata]Raw_Addr)
+    - Raw_Offset = 0x11414 - 0x11000 + 0xB200 = 0xB614
+
+12) Переходим по Raw_Offset (Ctrl + G)
+
+  <img width="495" height="380" alt="Снимок экрана 2025-07-14 011628" src="https://github.com/user-attachments/assets/05604da4-f9b0-40dc-9ae5-7d5095be19c2" />
+
+13) Перезаписать имеющиеся 8 байт на значение [.mycode]Virtual Addr в формате little endian
+    - 00 00 1C 00 00 00 00 00
+
+    <img width="2558" height="1318" alt="Снимок экрана 2025-07-14 012249" src="https://github.com/user-attachments/assets/a430fc0f-ce59-4fdf-9a1a-451e74eb47fb" />
+
+
+
 
