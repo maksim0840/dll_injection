@@ -40,10 +40,10 @@
 
 8)  Запоминаем значения Raw Addr и Virtual Addr
 
-    - Raw_Addr: 0x600
-    - Virtual_Addr: 0x1000
+    - [.text]Raw_Addr: 0x600
+    - [.text]Virtual_Addr: 0x1000
 
-10) Вычисляем Raw Offset по формуле (Raw_Offset = Function_RVA - Virtual_Addr + Raw_Addr)
+10) Вычисляем Raw Offset по формуле (Raw_Offset = Function_RVA - [.text]Virtual_Addr + [.text]Raw_Addr)
     
     - Raw_Offset = 0x15A0 - 0x1000 + 0x600 = 0xBA0
 
@@ -81,8 +81,8 @@
 
 3) Переключаемся на вкадку Optional Hdr и ищем значения Image Base и File Alignment
     
-    - Image Base: 0x140000000
-    - File Alignment: 0x200
+    - Image_Base: 0x140000000
+    - File_Alignment: 0x200
     
     <img width="2554" height="1322" alt="Снимок экрана 2025-07-15 134332" src="https://github.com/user-attachments/assets/9d3d7697-d831-4a87-a822-c0d1de8e1d16" />
 
@@ -110,14 +110,14 @@
 
 8) Переключаемся на вкладку Section Hdrs и запоминаем Virtual Addr нашей секции .mycode
     
-    - [.mycode]Virtual Addr: 0x1C000
+    - [.mycode]Virtual_Addr: 0x1C000
     
     <img width="2556" height="1311" alt="Снимок экрана 2025-07-14 003801" src="https://github.com/user-attachments/assets/474b0d3b-41bb-479c-b49b-cf89f14c6071" />
 
 9) В этой же вкладке (Section Hdrs) ищем секцию .text (секция с исполняемым кодом файла .exe) и запоминаем Raw Addr и Virtual Addr
     
-    - [.text]Raw Addr: 0x600
-    - [.text]Virtual Addr: 0x1000
+    - [.text]Raw_Addr: 0x600
+    - [.text]Virtual_Addr: 0x1000
     
     <img width="2556" height="1323" alt="Снимок экрана 2025-07-15 135042" src="https://github.com/user-attachments/assets/c078af5c-caa6-435f-abd1-63ffa38d4cc6" />
 
@@ -134,7 +134,7 @@
 
     <img width="2555" height="1362" alt="Снимок экрана 2025-07-15 135810" src="https://github.com/user-attachments/assets/1c46bc82-dcf5-4444-83ef-4c491c19d9ce" />
   
-    - File Addr: 0x14000175e
+    - File_Addr: 0x14000175e
       
 13) Вычисляем Raw Addr нашей команды по формуле (Raw_Addr = File_Addr - Image_Base - [.text]Virtual_Addr + [.text]Raw_Addr)
 
