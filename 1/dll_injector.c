@@ -6,6 +6,7 @@ int main() {
     printf("Enter PID of target process: ");
     scanf("%lu", &pid);
 
+    // УКАЗЫВАТЬ ПОЛНЫЙ ПУТЬ ДО .dll (ЕСЛИ .exe ФАЙЛ В НАХОДИТСЯ В ДРУГОЙ ДИРЕКТОРИИ)!!!!!!!!!
     const char* dllPath = "custom.dll";
 
     // Открываем чужой процесс с полными правами доступа

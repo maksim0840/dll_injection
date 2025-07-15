@@ -1,6 +1,5 @@
 #include <windows.h>
 
-// Явно экспортируем функцию
 __declspec(dllexport)
 VOID WINAPI customGetLocalTime(LPSYSTEMTIME t) {
     t->wHour = 12;
