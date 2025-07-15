@@ -163,14 +163,11 @@
     - 9D A8 01 00 - значение Custom Addr в виде байт-кода в формате little-endian
     - 90 - Nop-ы (пропуски значений)
 
-        
-      
-    <img width="2556" height="1318" alt="Снимок экрана 2025-07-15 141426" src="https://github.com/user-attachments/assets/b7416245-8ba0-41ed-bad2-bcf28bab42b3" />
+   <img width="2556" height="1318" alt="Снимок экрана 2025-07-15 141426" src="https://github.com/user-attachments/assets/b7416245-8ba0-41ed-bad2-bcf28bab42b3" />
 
-  
-  20) В левом меню навигации находим название открытого файла (sub.exe), нажимаем ПКМ и сохраняем наши изменния в новый .exe файл
-      
-    <img width="2556" height="1319" alt="Снимок экрана 2025-07-15 141738" src="https://github.com/user-attachments/assets/3998356f-ae11-4753-aeda-4fd386019b98" />
+20) В левом меню навигации находим название открытого файла (sub.exe), нажимаем ПКМ и сохраняем наши изменния в новый .exe файл
+
+   <img width="2556" height="1319" alt="Снимок экрана 2025-07-15 141738" src="https://github.com/user-attachments/assets/3998356f-ae11-4753-aeda-4fd386019b98" />
 
 
 
