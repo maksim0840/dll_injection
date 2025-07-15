@@ -127,13 +127,13 @@
     <img width="2559" height="1320" alt="Снимок экрана 2025-07-15 141011" src="https://github.com/user-attachments/assets/3a34c312-95e7-4fba-abe6-6202e7098d85" />
 
 17) Данные 2 команды можно заменить на 1 - вызов call нашей кастомной функции по адрессу Custom Addr. Байты, которые будут служить заменой выглядят следующим образом:
-      ```
-      E8 9D A8 01 00 90 90 90 90
-      ```
+    ```
+    E8 9D A8 01 00 90 90 90 90
+    ```
       
-      - E8 - команда call
-      - 9D A8 01 00 - значение Custom Addr в виде байт-кода в формате little-endian
-      - 90 - Nop-ы (пропуски значений)
+    - E8 - команда call
+    - 9D A8 01 00 - значение Custom Addr в виде байт-кода в формате little-endian
+    - 90 - Nop-ы (пропуски значений)
         
       
     <img width="2556" height="1318" alt="Снимок экрана 2025-07-15 141426" src="https://github.com/user-attachments/assets/b7416245-8ba0-41ed-bad2-bcf28bab42b3" />
